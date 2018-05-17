@@ -1,0 +1,27 @@
+ <div class="row">
+    <h1 class="title">Login</h1>
+  </div>
+  <div class="row">
+    <div class="col-lg-offset-3 col-lg-6">
+      <% form_tag %>
+        <div class="form-group">
+          <%= text_field :login_form, :username, placeholder: "User name", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= text_field :login_form, :password, placeholder: "Password",
+            class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= text_field :login_form, :insta_link, placeholder: "Instagram Link",
+            class: "form-control" %>
+        </div>
+
+        <div class="text-center">
+          <%= submit_tag "Submit" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <p>username= params['login_form']['username']
+        password= params['login_form']['password']
+        insta_link= params['login_form']['insta_link']</p>

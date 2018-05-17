@@ -1,0 +1,35 @@
+
+<div>
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h1 class="title">Follower BIO</h1>
+    </div>
+    <div class="col-lg-12 form-group">
+      <label>List Followers</label>
+      <table class="table">
+        <thead>
+          <th>Count</th>
+          <th>Instagram URL</th>
+          <th>Profile Picture</th>
+          <th>Posts</th>
+          <th>Followres</th>
+          <th>Following</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+         <% @users.each do |user|%>
+          <tr>
+            <td><%=user.id%></td>
+            <td><%=user.title%></td>
+            <td><img src='<%=user.image_url%>' height='50' width='50' /></td>
+            <td><%=user.post_number%></td>
+            <td><%=user.followers%></td>
+            <td><%=user.following%></td>
+            <td><%=user.description%></td>
+          </tr>
+          <%end%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
