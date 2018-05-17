@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_05_17_061132) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "title"
-    t.string "image_url"
+    t.text "image_url"
     t.integer "post_number"
     t.integer "followers"
     t.integer "following"
